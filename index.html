@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="assets/javascript/game.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Hangman</title>
+</head>
+
+<body>
+    <div id="winscreenbackground"></div>
+    <div id="winscreen">
+            General Lee has surrendered! Mr. President, you have saved the Union! As a token of appreciation,
+            we have all pooled our silver to buy you theater tickets! Box seats! Nobody deserves it more than
+            you!
+        <div id="restart">Press ENTER to Play Again</div>
+    </div>
+    <!-- </div> -->
+    <div class="background">
+        <div id="container">
+            <!-- <div id="winscreenbackground">
+                <div id="winscreen">
+                    General Lee has surrendered! Mr. President, you have saved the Union! As a token of appreciation,
+                    we have all pooled our silver to buy you theater tickets! Box seats! Nobody deserves it more than
+                    you!
+                    <div id="restart">Press ENTER to Play Again</div>
+                </div>
+            </div> -->
+            <div class="title">
+                The Civil War(d) Game
+                <div id="enter">Press ENTER / RETURN to Play!</div>
+            </div>
+
+
+            <img class="parchment" src="assets/images/Parchment/scrolledit.png" alt="Parchment scroll">
+
+            <div class="typewriter">
+                <h1 id="list0"> The Year is 1860. You are Abraham Lincoln.</h1>
+                <h1 id="list1"> The Union is in Danger of Dissolving.</h1>
+                <h1 id="list2"> Remember a Word from your Famous Works </h1>
+                <h1 id="list3"> before all 11 Southern States Secede.</h1>
+                <h1 id="list4"> If You Remember Five in a Row,</h1>
+                <h1 id="list5"> YOU SAVE THE UNION!</h1>
+            </div>
+
+
+
+            <div class="main">
+
+                <p>Wins: <span id="wins"></span></p>
+                <p>Losses: <span id="losses"></span></p>
+                <p>Consecutive Wins: <span id="consecutivewins"></span></p>
+                <p>Guesses Left: <span id="guessesleft"></span></p>
+
+                <p><span id="blanks"></span></p>
+
+                <p>Letters Used: </p>
+                <div class="letterguesses" span id="lettersused"></span></div>
+
+                <h1><span id="printwin"></span></h1>
+                <h1><span id="printloss"></span></h1>
+            </div>
+            <!-- <div> -->
+            <ul class="stately" id="plain">
+                <li data-state="al" class="south" id="al">A</li>
+                <!-- <li data-state="ak" class="ak">B</li> -->
+                <li data-state="ar" class="south" id="ar">C</li>
+                <!-- <li data-state="az" class="az">D</li> -->
+                <!-- <li data-state="ca" class="ca">E</li> -->
+                <!-- <li data-state="co" class="co">F</li> -->
+                <li data-state="ct" class="north">G</li>
+                <li data-state="de" class="north">H</li>
+                <li data-state="dc" class="north">I</li>
+                <li data-state="fl" class="south" id="fl">J</li>
+                <li data-state="ga" class="south" id="ga">K</li>
+                <!-- <li data-state="hi" class="hi">L</li> -->
+                <!-- <li data-state="id" class="id">M</li> -->
+                <li data-state="il" class="north">N</li>
+                <li data-state="in" class="north">O</li>
+                <li data-state="ia" class="north">P</li>
+                <li data-state="ks" class="north">Q</li>
+                <li data-state="ky" class="north">R</li>
+                <li data-state="la" class="south" id="la">S</li>
+                <li data-state="me" class="north">T</li>
+                <li data-state="md" class="north">U</li>
+                <li data-state="ma" class="north">V</li>
+                <li data-state="mi" class="north">W</li>
+                <li data-state="mn" class="north">X</li>
+                <li data-state="ms" class="south" id="ms">Y</li>
+                <li data-state="mo" class="north">Z</li>
+                <!-- <li data-state="mt" class="mt">a</li> -->
+                <!-- <li data-state="ne" class="ne">b</li> -->
+                <!-- <li data-state="nv" class="nv">c</li> -->
+                <li data-state="nh" class="north">d</li>
+                <li data-state="nj" class="north">e</li>
+                <!-- <li data-state="nm" class="nm">f</li> -->
+                <li data-state="ny" class="north">g</li>
+                <li data-state="nc" class="south" id="nc">h</li>
+                <!-- <li data-state="nd" class="nd">i</li> -->
+                <li data-state="oh" class="north">j</li>
+                <!-- <li data-state="ok" class="ok">k</li> -->
+                <!-- <li data-state="or" class="or">l</li> -->
+                <li data-state="pa" class="north">m</li>
+                <li data-state="ri" class="north">n</li>
+                <li data-state="sc" class="south" id="sc">o</li>
+                <!-- <li data-state="sd" class="sd">p</li> -->
+                <li data-state="tn" class="south" id="tn">q</li>
+                <li data-state="tx" class="south" id="tx">r</li>
+                <!-- <li data-state="ut" class="ut">s</li> -->
+                <li data-state="va" class="south" id="va">t</li>
+                <li data-state="vt" class="north">u</li>
+                <!-- <li data-state="wa" class="wa">v</li> -->
+                <li data-state="wv" class="north">w</li>
+                <li data-state="wi" class="north">x</li>
+                <!-- <li data-state="wy" class="wy">y</li>	 -->
+            </ul>
+            <!-- <ul class="seceders">
+                <li>South Carolina Secedes from the Union</li>
+                <li>South Carolina Secedes from the Union</li>
+                <li>South Carolina Secedes from the Union</li>
+            </ul> -->
+            <!-- </div> -->
+            <!-- <img class="lincoln" src="assets/images/lincoln-clipart-1.jpg" alt="Apraham Lincoln" style="width:500px;" -->
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+        });
+    </script>
+
+
+
+</body>
+
+</html>

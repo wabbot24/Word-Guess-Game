@@ -1,0 +1,241 @@
+/* h1 {
+    font-size: 48px;
+} */
+body {
+    background-image: url(../images/grunge-vintage-old-paper-background/431.jpg);
+
+}
+/* .background {
+    padding: 20px;
+    padding-bottom: 80px;
+    background-image: url(../images/grunge-vintage-old-paper-background/431.jpg);
+} */
+#container {
+    width: 1280px;
+    height: 700px;
+    margin: auto;
+    margin-top: 50px;
+    /* margin-bottom: 40px; */
+    padding: 20px;
+    box-shadow: 4px 10px 18px 10px hsla(0,0%,0%,0.25);
+    background: rgba(255, 255, 255, 0.80);
+}
+@font-face {
+    font-family: CivilWar;
+    src: url(../font/opera-lyrics-smooth.ttf);
+  }
+.title {
+    font-family: CivilWar;
+    font-size: 32px;
+    position: relative;
+    z-index: 2;
+    right: 20px;
+    text-align: center;
+    line-height: 1.5em;
+}
+.letterguesses {
+    width: 200px;
+}
+#winscreen {
+    position: absolute;
+    /* float: left; */
+    left: 600px;
+    top: 120px;
+    z-index: 10;
+    font-size: 18px;
+    margin: auto;
+    /* margin-left: 350px; */
+    padding: 80px;
+    height: 412px;
+    width: 284px;
+    background-color: whitesmoke;
+    color: black;
+    font-family: CivilWar;
+    letter-spacing: .2em;
+    line-height: 1.8em;
+    background: rgba(255, 255, 255, 0.50);
+
+    background-image: url(../images/Parchment/scrolledit.png);
+    box-shadow: 4px 10px 18px 10px hsla(0,0%,0%,0.25);
+    display: none;
+}
+#winscreenbackground {
+    height: 100%;
+    width: 100%;
+    background-color: whitesmoke;
+    position: relative;
+    z-index: 9;
+}
+#restart {
+    color: whitesmoke;
+    line-break: 2em;
+    letter-spacing: 0em;
+    font-size: 17px;
+}
+
+.hatbeard {
+    height: 300px;
+    float: left;
+    position: relative;
+    left: 0;
+    z-index: 1;
+}
+
+.main {
+    /* float: left; */
+    font-family: CivilWar;
+    padding-left: 100px;
+    padding-top: 25px;
+    position: relative;
+    color: whitesmoke;
+    width: 300px;
+    height: 543px;
+    z-index: 2;
+    background-image: url(../images/Lincoln-hatbeard.png);
+    background-size: 400px;
+
+}
+p {
+    line-height: 1.7em;
+    font-size: 18px;
+}
+.parchment {
+    position: relative;
+    float: right;
+    right: 0;
+    z-index: 2;
+    /* box-shadow: 0 5px 12px 0 hsla(0,0%,0%,0.05); */
+}
+.typewriter {
+    /* width: 360px; */
+    /* height:600px; */
+    padding: 20px;
+    /* padding-right: 0px; */
+    float: right;
+    position: relative;
+    left: 425px;
+    top: 90px;
+    z-index: 3;
+}
+.typewriter h1 {
+    font-family: cursive;
+    font-weight: bolder;
+    font-size: 1em;
+    line-height: 2em;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    /* border-right: .15em solid orange; The typwriter cursor */
+    white-space: nowrap; 
+    margin: 0; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .1em; /* Adjust as needed */
+    /* look into keyframes */
+    animation: 
+      typing 1s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+#list1 {
+    animation-delay: 1s;
+  }
+#list2 {
+    animation-delay: 2s;
+}
+#list3 {
+    animation-delay: 3s;
+}
+#list4 {
+    animation-delay: 4s;
+}
+#list5 {
+    animation-delay: 5s;
+}
+
+  #typewritertext {
+    font-family: cursive; 
+    font-size:30px; 
+    margin: 10px 50px; 
+    letter-spacing: 6px; 
+    font-weight: bold;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  /* @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  } */
+
+.seceders {
+    position: relative;
+    z-index: 2;
+    float: left;
+    padding-right:
+}
+
+@font-face {
+    font-family: 'stately-webfont';
+    src: url("../font/stately-webfont.eot");
+    src: url("../font/stately-webfont.eot?#iefix") format("embedded-opentype"), url("../font/stately-webfont.woff") format("woff"), url("../font/stately-webfont.ttf") format("truetype"), url("../font/stately-webfont.svg#testfontRegular") format("svg");
+    font-weight: normal;
+    font-style: normal; 
+}
+  
+  .stately {
+      z-index: 1;
+    font: normal normal 550px "stately-webfont";
+    line-height: 100%;
+    font-size-adjust: none;
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    -ms-text-rendering: optimizeLegibility;
+    -o-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+    -moz-font-feature-settings: "liga=1";
+    -ms-font-feature-settings: "liga" 1;
+    -ms-font-feature-settings: "liga", "dlig";
+    /* overflow: hidden; */
+    width: 550px;
+    /* display: block; */
+    /* margin: 0 auto; */
+    /* margin-bottom: -100px; */
+    /* margin-left: -200px; */
+    /* padding-bottom: -100px; */
+    padding-left: 0;
+    /* padding-bottom: 400px; */
+    list-style: none;
+    /* background: #eeeeee; */
+    border-radius: 0; 
+    position: relative;
+    bottom: 600px;
+    left: 280px;
+
+    float: left;
+  }
+  .south {
+      color: blue;
+  }
+    .stately li {
+      float: left;
+      margin: -20% 0 0 -100%;
+      position: relative;
+      left: 101%;
+      width: 100%;
+      cursor: default;
+      -webkit-transition: all 1s ease-in;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; 
+    }
+
+    /* .south {
+        color: rgb(243, 233, 89);
+      } */
+      .north {
+        color: blue;
+      }
